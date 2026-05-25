@@ -3,15 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>세움홈 방문예약</title>
+<title>SEUM — 방문예약</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="topbar">
+    <div class="brand">
+      <span class="brand-mark">SEUM</span>
+      <span class="brand-sub">ARCHITECTURE &amp; BUILD</span>
+    </div>
+    <span class="topbar-tag">EST. 2015 · KOREA</span>
+  </nav>
+
   <main class="page">
     <form id="reservation-form" class="card" novalidate>
       <header class="card-header">
-        <h1>세움홈 방문예약</h1>
-        <p>입력하신 정보는 방문 상담 안내 및 예약 확인 용도로만 사용됩니다.</p>
+        <div class="eyebrow">VISIT RESERVATION</div>
+        <h1>방문 상담 예약</h1>
+        <p>지어드릴 집의 첫 만남을 위해, 아래 정보를 남겨주세요.<br />입력하신 내용은 상담 안내 및 예약 확인 용도로만 사용됩니다.</p>
       </header>
 
       <section class="section">
@@ -191,8 +203,22 @@
         </label>
       </div>
 
-      <button type="submit" class="submit">방문예약 접수</button>
+      <button type="submit" class="submit">
+        <span>방문예약 접수</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
     </form>
+
+    <footer class="page-foot">
+      <div class="foot-row">
+        <span>SEUM ARCHITECTURE &amp; BUILD</span>
+        <span>1577-0000 · contact@seum.co.kr</span>
+      </div>
+      <div class="foot-row muted">
+        <span>경기도 여주시 가남읍 ○○로 00</span>
+        <span>© 2026 SEUM. All rights reserved.</span>
+      </div>
+    </footer>
   </main>
 
   <script src="script.js"></script>
