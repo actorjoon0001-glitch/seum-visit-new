@@ -13,8 +13,15 @@
 
   const phone = document.getElementById("phone");
   if (phone) {
+    const formatPhone = (raw) => {
+      const d = raw.replace(/\D/g, "").slice(0, 11);
+      if (d.length < 4) return d;
+      if (d.length < 8) return `${d.slice(0, 3)}-${d.slice(3)}`;
+      if (d.length <= 10) return `${d.slice(0, 3)}-${d.slice(3, 6)}-${d.slice(6)}`;
+      return `${d.slice(0, 3)}-${d.slice(3, 7)}-${d.slice(7)}`;
+    };
     phone.addEventListener("input", (e) => {
-      e.target.value = e.target.value.replace(/[^0-9]/g, "").slice(0, 11);
+      e.target.value = formatPhone(e.target.value);
     });
   }
 
