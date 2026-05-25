@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>세움홈 방문예약</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <form id="reservation-form" class="card" novalidate>
+      <header class="card-header">
+        <h1>세움홈 방문예약</h1>
+        <p>입력하신 정보는 방문 상담 안내 및 예약 확인 용도로만 사용됩니다.</p>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title"><span class="dot"></span>기본 정보</h2>
+
+        <div class="field">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="예: 홍길동" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone" name="phone" placeholder="예: 01012345678" inputmode="numeric" required />
+        </div>
+
+        <div class="row two">
+          <div class="field">
+            <label for="visit-date">방문일</label>
+            <input type="date" id="visit-date" name="visitDate" required />
+          </div>
+          <div class="field">
+            <label for="visit-time">
+              방문시간 <span class="badge">1시간 단위</span>
+            </label>
+            <select id="visit-time" name="visitTime" required>
+              <option value="">선택</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="visitors">방문 인원</label>
+          <select id="visitors" name="visitors" required>
+            <option value="">선택</option>
+            <option>1명</option>
+            <option>2명</option>
+            <option>3명</option>
+            <option>4명</option>
+            <option>5명 이상</option>
+          </select>
+          <p class="hint">동행 인원 포함 총 인원수를 선택해주세요.</p>
+        </div>
+
+        <div class="field">
+          <label for="source">유입경로</label>
+          <select id="source" name="source">
+            <option value="">선택</option>
+            <option>네이버 검색</option>
+            <option>구글 검색</option>
+            <option>인스타그램</option>
+            <option>유튜브</option>
+            <option>지인 소개</option>
+            <option>기타</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="dot"></span>관심 / 조건</h2>
+
+        <div class="field">
+          <label for="house-type">관심 주택 / 시공 유형</label>
+          <select id="house-type" name="houseType">
+            <option value="">선택</option>
+            <option>단독주택</option>
+            <option>전원주택</option>
+            <option>듀플렉스</option>
+            <option>상가주택</option>
+            <option>리모델링</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="pyeong">희망 평수</label>
+          <select id="pyeong" name="pyeong">
+            <option value="">선택</option>
+            <option>~ 20평</option>
+            <option>20 ~ 30평</option>
+            <option>30 ~ 40평</option>
+            <option>40 ~ 50평</option>
+            <option>50평 이상</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="budget">예산 범위 (대략)</label>
+          <select id="budget" name="budget">
+            <option value="">선택</option>
+            <option>~ 2억</option>
+            <option>2억 ~ 3억</option>
+            <option>3억 ~ 5억</option>
+            <option>5억 ~ 7억</option>
+            <option>7억 이상</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="land-owned">토지 보유 여부</label>
+          <select id="land-owned" name="landOwned">
+            <option value="">선택</option>
+            <option>보유 중</option>
+            <option>계약 진행 중</option>
+            <option>알아보는 중</option>
+            <option>미보유</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="land-address">
+            토지(지번) <span class="badge badge-soft">추천</span>
+          </label>
+          <input type="text" id="land-address" name="landAddress" placeholder="예: 경기도 여주시 가남읍 태평리 123-4" />
+          <p class="hint">시/군/읍면동 + 리 + 번지를 한 줄로 입력해주세요.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="dot"></span>3월 LG 가전 이벤트</h2>
+
+        <div class="field">
+          <label for="event-apply">3월 LG가전 이벤트 적용</label>
+          <select id="event-apply" name="eventApply">
+            <option value="">선택</option>
+            <option>적용 희망</option>
+            <option>미적용</option>
+            <option>상담 후 결정</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="event-target">이벤트 대상</label>
+          <select id="event-target" name="eventTarget">
+            <option value="">선택</option>
+            <option>신규 계약자</option>
+            <option>기존 상담 고객</option>
+            <option>해당 없음</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="dot"></span>3D 도면</h2>
+
+        <div class="field">
+          <label for="drawing-3d">3D 도면 희망 여부</label>
+          <select id="drawing-3d" name="drawing3d">
+            <option value="">선택</option>
+            <option>희망</option>
+            <option>비희망</option>
+            <option>상담 후 결정</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="dot"></span>추가 메모</h2>
+
+        <div class="field">
+          <label for="memo">메모</label>
+          <textarea id="memo" name="memo" rows="4" placeholder="추가로 전달하고 싶은 내용이 있으면 적어주세요."></textarea>
+        </div>
+      </section>
+
+      <div class="agree">
+        <label>
+          <input type="checkbox" id="agree" name="agree" required />
+          <span>개인정보 수집·이용에 동의합니다.</span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit">방문예약 접수</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
