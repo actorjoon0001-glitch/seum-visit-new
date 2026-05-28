@@ -24,31 +24,32 @@
         <div class="eyebrow">VISIT RESERVATION</div>
         <h1>방문 상담 예약</h1>
         <p>지어드릴 집의 첫 만남을 위해, 아래 정보를 남겨주세요.<br />입력하신 내용은 상담 안내 및 예약 확인 용도로만 사용됩니다.</p>
+        <p class="required-note"><span class="req" aria-hidden="true">*</span> 표시는 필수 입력 항목입니다.</p>
       </header>
 
       <section class="section">
         <h2 class="section-title"><span class="dot"></span>기본 정보</h2>
 
         <div class="field">
-          <label for="name">이름</label>
-          <input type="text" id="name" name="name" placeholder="예: 홍길동" required />
+          <label for="name">이름 <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="예: 홍길동" autocomplete="name" required aria-required="true" />
         </div>
 
         <div class="field">
-          <label for="phone">연락처</label>
-          <input type="tel" id="phone" name="phone" placeholder="예: 010-1234-5678" inputmode="numeric" maxlength="13" required />
+          <label for="phone">연락처 <span class="req" aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="예: 010-1234-5678" autocomplete="tel" inputmode="numeric" maxlength="13" required aria-required="true" />
         </div>
 
         <div class="row two">
           <div class="field">
-            <label for="visit-date">방문일</label>
-            <input type="date" id="visit-date" name="visitDate" required />
+            <label for="visit-date">방문일 <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="visit-date" name="visitDate" required aria-required="true" />
           </div>
           <div class="field">
             <label for="visit-time">
-              방문시간 <span class="badge">1시간 단위</span>
+              방문시간 <span class="req" aria-hidden="true">*</span> <span class="badge">1시간 단위</span>
             </label>
-            <select id="visit-time" name="visitTime" required>
+            <select id="visit-time" name="visitTime" required aria-required="true">
               <option value="">선택</option>
               <option>10:00</option>
               <option>11:00</option>
@@ -64,8 +65,8 @@
         </div>
 
         <div class="field">
-          <label for="visitors">방문 인원</label>
-          <select id="visitors" name="visitors" required>
+          <label for="visitors">방문 인원 <span class="req" aria-hidden="true">*</span></label>
+          <select id="visitors" name="visitors" required aria-required="true" aria-describedby="visitors-hint">
             <option value="">선택</option>
             <option>1명</option>
             <option>2명</option>
@@ -73,7 +74,7 @@
             <option>4명</option>
             <option>5명 이상</option>
           </select>
-          <p class="hint">동행 인원 포함 총 인원수를 선택해주세요.</p>
+          <p class="hint" id="visitors-hint">동행 인원 포함 총 인원수를 선택해주세요.</p>
         </div>
 
         <div class="field">
@@ -144,8 +145,8 @@
           <label for="land-address">
             토지(지번) <span class="badge badge-soft">추천</span>
           </label>
-          <input type="text" id="land-address" name="landAddress" placeholder="예: 경기도 여주시 가남읍 태평리 123-4" />
-          <p class="hint">시/군/읍면동 + 리 + 번지를 한 줄로 입력해주세요.</p>
+          <input type="text" id="land-address" name="landAddress" placeholder="예: 경기도 여주시 가남읍 태평리 123-4" aria-describedby="land-address-hint" />
+          <p class="hint" id="land-address-hint">시/군/읍면동 + 리 + 번지를 한 줄로 입력해주세요.</p>
         </div>
       </section>
 
@@ -198,8 +199,8 @@
 
       <div class="agree">
         <label>
-          <input type="checkbox" id="agree" name="agree" required />
-          <span>개인정보 수집·이용에 동의합니다.</span>
+          <input type="checkbox" id="agree" name="agree" required aria-required="true" />
+          <span>개인정보 수집·이용에 동의합니다. <span class="req" aria-hidden="true">*</span></span>
         </label>
       </div>
 
