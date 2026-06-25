@@ -58,7 +58,6 @@
               <option>15:00</option>
               <option>16:00</option>
               <option>17:00</option>
-              <option>18:00</option>
             </select>
           </div>
         </div>
@@ -75,19 +74,6 @@
           </select>
           <p class="hint">동행 인원 포함 총 인원수를 선택해주세요.</p>
         </div>
-
-        <div class="field">
-          <label for="source">유입경로</label>
-          <select id="source" name="source">
-            <option value="">선택</option>
-            <option>네이버 검색</option>
-            <option>구글 검색</option>
-            <option>인스타그램</option>
-            <option>유튜브</option>
-            <option>지인 소개</option>
-            <option>기타</option>
-          </select>
-        </div>
       </section>
 
       <section class="section">
@@ -97,11 +83,16 @@
           <label for="house-type">관심 주택 / 시공 유형</label>
           <select id="house-type" name="houseType">
             <option value="">선택</option>
-            <option>단독주택</option>
             <option>전원주택</option>
-            <option>듀플렉스</option>
-            <option>상가주택</option>
+            <option>세컨하우스</option>
+            <option>이동식주택</option>
+            <option>체류형쉼터</option>
+            <option>농막</option>
+            <option>컨테이너하우스</option>
+            <option>시골집수리</option>
             <option>리모델링</option>
+            <option>철거</option>
+            <option>미정</option>
           </select>
         </div>
 
@@ -109,11 +100,16 @@
           <label for="pyeong">희망 평수</label>
           <select id="pyeong" name="pyeong">
             <option value="">선택</option>
-            <option>~ 20평</option>
-            <option>20 ~ 30평</option>
-            <option>30 ~ 40평</option>
-            <option>40 ~ 50평</option>
-            <option>50평 이상</option>
+            <option>1 ~ 5평</option>
+            <option>6 ~ 10평</option>
+            <option>11 ~ 15평</option>
+            <option>16 ~ 20평</option>
+            <option>21 ~ 25평</option>
+            <option>26 ~ 30평</option>
+            <option>31 ~ 35평</option>
+            <option>36 ~ 40평</option>
+            <option>41 ~ 45평</option>
+            <option>46 ~ 50평</option>
           </select>
         </div>
 
@@ -121,11 +117,12 @@
           <label for="budget">예산 범위 (대략)</label>
           <select id="budget" name="budget">
             <option value="">선택</option>
-            <option>~ 2억</option>
-            <option>2억 ~ 3억</option>
-            <option>3억 ~ 5억</option>
-            <option>5억 ~ 7억</option>
-            <option>7억 이상</option>
+            <option>3천만원 이하</option>
+            <option>5천만원 이하</option>
+            <option>5천 ~ 8천만원</option>
+            <option>8천만원 ~ 1억</option>
+            <option>1억 이상</option>
+            <option>미정</option>
           </select>
         </div>
 
@@ -152,6 +149,7 @@
           <label for="build-timeline">건축 희망 시기</label>
           <select id="build-timeline" name="buildTimeline">
             <option value="">선택</option>
+            <option>1개월 이내</option>
             <option>3개월 이내</option>
             <option>6개월 이내</option>
             <option>1년 이내</option>
