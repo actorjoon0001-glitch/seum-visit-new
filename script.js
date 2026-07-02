@@ -1,9 +1,9 @@
 (function () {
   // ───────────────────────────────────────────────────────────
-  // n8n Webhook URL 을 여기에 붙여넣으세요.
-  // (n8n Webhook 노드의 "Production URL" 값)
-  // 예: "https://your-n8n.example.com/webhook/seum-visit"
-  const WEBHOOK_URL = "";
+  // n8n Webhook URL (Webhook 노드의 "Production URL" 값)
+  // 테스트 시에는 n8n에서 "Listen for test event"를 누른 뒤 아래 값을
+  // https://actorjoon0001.app.n8n.cloud/webhook-test/seumhome-visit 로 잠시 바꿔 사용하세요.
+  const WEBHOOK_URL = "https://actorjoon0001.app.n8n.cloud/webhook/seumhome-visit";
   // ───────────────────────────────────────────────────────────
 
   const form = document.getElementById("reservation-form");
