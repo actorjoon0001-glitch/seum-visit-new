@@ -28,7 +28,7 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const required = ["name", "phone", "visit-date", "visit-time", "visitors"];
+    const required = ["name", "phone", "visit-date", "visit-time", "visitors", "showroom"];
     for (const id of required) {
       const el = document.getElementById(id);
       if (el && !el.value) {
