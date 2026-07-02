@@ -85,7 +85,7 @@
     // 웹훅 URL 미설정 시(로컬 테스트) 콘솔 출력으로 폴백
     if (!WEBHOOK_URL) {
       console.log("방문예약 데이터 (WEBHOOK_URL 미설정)", payload);
-      alert("방문예약이 접수되었습니다.\n상담 후 연락드리겠습니다.");
+      alert("방문예약이 접수되었습니다.\n예약 확인 후 담당자가 연락드리겠습니다.");
       form.reset();
       return;
     }
@@ -99,7 +99,7 @@
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-      alert("방문예약이 접수되었습니다.\n상담 후 연락드리겠습니다.");
+      alert("방문예약이 접수되었습니다.\n예약 확인 후 담당자가 연락드리겠습니다.");
       form.reset();
     } catch (err) {
       console.error("방문예약 전송 실패", err);
