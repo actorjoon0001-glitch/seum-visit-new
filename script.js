@@ -1,9 +1,9 @@
 (function () {
   // ───────────────────────────────────────────────────────────
   // n8n Webhook URL (Webhook 노드의 "Production URL" 값)
-  // 테스트 시에는 n8n에서 "Listen for test event"를 누른 뒤 아래 값을
-  // https://actorjoon0001.app.n8n.cloud/webhook-test/seumhome-visit 로 잠시 바꿔 사용하세요.
-  const WEBHOOK_URL = "https://actorjoon0001.app.n8n.cloud/webhook/seumhome-visit";
+  // 현재: 복사본 워크플로우 "세움홈 방문예약 new" (Active 상태여야 동작)
+  // 원본(백업) URL: https://actorjoon0001.app.n8n.cloud/webhook/seumhome-visit
+  const WEBHOOK_URL = "https://actorjoon0001.app.n8n.cloud/webhook/d11739a2-ed70-4d10-96c7-43c7ce0394e8";
   // ───────────────────────────────────────────────────────────
 
   const form = document.getElementById("reservation-form");
